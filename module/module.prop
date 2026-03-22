@@ -1,0 +1,6 @@
+id=PTTBroadcast
+name=PTT Broadcast
+version=v1.0
+versionCode=1
+author=D21-User
+description=拦截PTT按键(BTN_9)并发送android.intent.action.PTT广播，让所有对讲软件支持PTT发射键

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pttbroadcast"
+    android:sharedUserId="android.uid.system">
+
+    <!-- 系统签名权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+    <application
+        android:allowBackup="true"
+        android:label="PTT Broadcast"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:persistent="true">
+
+        <!-- 开机自启动 -->
+        <receiver android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- PTT服务 -->
+        <service
+            android:name=".PTTService"
+            android:enabled="true"
+            android:exported="false"/>
+
+    </application>
+
+</manifest>

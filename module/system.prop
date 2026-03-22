@@ -1,0 +1,3 @@
+# PTT Broadcast Module - System Properties
+# 让PTTBroadcast.apk开机自启动
+persist.ptt.broadcast.enabled=true
